@@ -30,11 +30,11 @@ The Logitech Gaming LED SDK is a C based interface and is designed for use by C/
 # Do’s and Don’ts
 These are a few guidelines that may help you implement 'better' support in your game:
 
-● If you don’t use the LogiLedSetTargetDevice function, remember that some devices have only a single color.
+● If you don’t use the LogiLedSetTargetDevice function, remember that some devices have only a single color.<br />
 They will work fine if flashing a red warning light for example (their color will flash), but if rotating lighting try to make sure that the max value of the three colors goes up and down so that single color devices will have their brightness go up and down.
 
-● Whenever doing a temporary lighting effect, do not forget to save the current lighting (using LogiLedSaveCurrentLighting function) just before starting the effect, and then restoring the lighting (via SDK’s LogiLedRestoreLighting function) right after the effect is finished. 
+● Whenever doing a temporary lighting effect, do not forget to save the current lighting (using LogiLedSaveCurrentLighting function) just before starting the effect, and then restoring the lighting (via SDK’s LogiLedRestoreLighting function) right after the effect is finished.<br />
 This only applies to user defined effects, the saving-restore lighting is already included in the preset effects (LogiLedFlashLighting and LogiLedPulseLighting).
 
-● When calling LogiLedSetLighting, Logitech Gaming Software will make sure to not override current brightness for devices that only support single color. 
+● When calling LogiLedSetLighting, Logitech Gaming Software will make sure to not override current brightness for devices that only support single color.<br />
 Therefore, setting the lighting to 100% red, on a G710+ it will result in a max brightness according to the user hardware settings.
