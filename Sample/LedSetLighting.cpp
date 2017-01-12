@@ -13,13 +13,13 @@ using namespace std;
 int main()
 {
 
-	LogiLedInit();
+    LogiLedInit();
 
-	int red = 100;
-	int green = 0;
-	int blue = 0;
+    int red = 100;
+    int green = 0;
+    int blue = 0;
  
-	int major, minor, build = 0;
+    int major, minor, build = 0;
 	//show sdk version
     if(!LogiLedGetSdkVersion(&major, &minor, & build))
     {
