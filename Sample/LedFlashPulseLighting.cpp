@@ -14,9 +14,9 @@ using namespace std;
 int main()
 {
 
-	LogiLedInit();
-	Sleep(50);
-		
+    LogiLedInit();
+	Sleep(500);
+
 	int red = 100;
     int green = 0;
     int blue = 0;
@@ -34,7 +34,6 @@ int main()
 	green=100;
 	duration = 5000;
 	interval = 300;
-	Sleep(50);
 	//start to pulsing
 	LogiLedPulseLighting(red, green, blue, duration, interval);
 	
@@ -44,4 +43,4 @@ int main()
 	getchar();
 	
 	LogiLedShutdown();
-}
+}	
