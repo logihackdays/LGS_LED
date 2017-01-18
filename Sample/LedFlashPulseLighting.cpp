@@ -40,6 +40,7 @@ int main()
     printf("start Pulsing red=%d, green=%d, blue=%d, duration=%d, interval=%d \n",red,green,blue,duration,interval);
     Sleep(duration+1000);
     LogiLedStopEffects();
+    cout << "Press Enter to exit";
     getchar();
 	
     LogiLedShutdown();
