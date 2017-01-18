@@ -33,6 +33,7 @@ int main()
 	//set the lighting of device
 	LogiLedSetLighting(red, green, blue);
 	printf("set color red=%d, green=%d, blue=%d  \n",red,green,blue);
+	cout << "Press Enter to exit";
 	getchar();
 	LogiLedShutdown();
 }
