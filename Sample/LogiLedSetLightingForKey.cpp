@@ -19,8 +19,8 @@ int main()
 	Sleep(500);
 
 	int red = 0;
-    int green = 0;
-    int blue = 0;
+        int green = 0;
+        int blue = 0;
 
 	//set the lighting to be black
 	LogiLedSetLighting(red, green, blue);
@@ -33,7 +33,7 @@ int main()
 	int scanCode=16;
 
 	//List of scan codes here :http://msdn.microsoft.com/en-us/library/aa299374(v=vs.60).aspx
-    LogiLedSetLightingForKeyWithScanCode(scanCode, red, green, blue);
+        LogiLedSetLightingForKeyWithScanCode(scanCode, red, green, blue);
 	printf("set color for key with scanCode. scanCode=%d  red=%d, green=%d, blue=%d  \n",scanCode,red,green,blue);
 	Sleep(2000);
 	cout << "Press Enter to do LogiLedSetLightingForKeyWithHidCode" << endl;
