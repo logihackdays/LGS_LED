@@ -44,7 +44,7 @@ int main()
 	blue = 0;
 	int hidCode = 26;
 
-	//List of scan codes here :http://www.freebsddiary.org/APC/usb_hid_usages.php
+	//List of hid codes here :http://www.freebsddiary.org/APC/usb_hid_usages.php
 	LogiLedSetLightingForKeyWithHidCode(hidCode, red, green, blue);
 	printf("set color for key with hidCode. hidCode=%d  red=%d, green=%d, blue=%d  \n",hidCode,red,green,blue);
 	Sleep(2000);
@@ -55,7 +55,7 @@ int main()
 	green = 0;
 	blue = 100;
 	LogiLed::KeyName keyName = LogiLed::KeyName::E;
-	//
+	//set the lighting for key
 	LogiLedSetLightingForKeyWithKeyName(keyName, red, green, blue);
 	printf("set color for key with keyName. keyName=%d  red=%d, green=%d, blue=%d  \n",keyName,red,green,blue);
 	Sleep(2000);
@@ -85,6 +85,7 @@ int main()
 	int bluePercentage = 0;
 	int msDuration = 4000; 
 	int msInterval = 300;
+	//set the flashing effect for key
 	LogiLedFlashSingleKey(keyName,  redPercentage,  greenPercentage,  bluePercentage,  msDuration,  msInterval);
 	printf("FlashSingleKey with keyName. keyName=%d  redPercentage=%d, greenPercentage=%d, bluePercentage=%d, msDuration=%d, msInterval=%d  \n",keyName,redPercentage,greenPercentage,bluePercentage,msDuration,msInterval);
 	Sleep(1000);
@@ -104,6 +105,7 @@ int main()
 	int finishBluePercentage=0;
 	int Duration=5000;
 	bool isInfinite=false;
+	//set the pulse effect for key
 	LogiLedPulseSingleKey(keyName, startRedPercentage, startGreenPercentage, startBluePercentage, finishRedPercentage, finishGreenPercentage, finishBluePercentage, Duration, isInfinite);
 	printf("PulseSingleKey with keyName. keyName=%d  startRedPercentage=%d, startGreenPercentage=%d, startBluePercentage=%d, finishRedPercentage=%d, finishGreenPercentage=%d, finishBluePercentage=%d, Duration=%d, msInterval=%b  \n",keyName,startRedPercentage,startGreenPercentage,startBluePercentage,finishRedPercentage,finishGreenPercentage,finishBluePercentage,Duration,msInterval);
 	Sleep(Duration + 1000);
